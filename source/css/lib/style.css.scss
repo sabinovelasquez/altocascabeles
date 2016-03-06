@@ -1,1 +1,15 @@
 @import 'functions';
+@import 'colors';
+@import 'nav';
+@import 'header';
+
+
+body{
+	font-family: 'Crimson Text', serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Julius Sans One', sans-serif;
+}
+section{
+	padding: 80px 0;
+}

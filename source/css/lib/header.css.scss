@@ -1,0 +1,9 @@
+@import 'functions';
+@import 'colors';
+@import 'logo';
+
+header{
+	min-height: 520px;
+	background: url('../img/head/1.jpg');
+	background-size: cover;
+}

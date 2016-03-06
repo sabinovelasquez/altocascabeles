@@ -1,0 +1,13 @@
+@import 'functions';
+@import 'colors';
+@import 'logo';
+
+nav.navbar-default{
+	font-family: 'Julius Sans One', sans-serif;
+	background-color: $brown;
+	border-color: darken($brown, 10);
+	color: white;
+	.navbar-brand{
+		font-family: 'Julius Sans One', sans-serif;
+	}
+}
