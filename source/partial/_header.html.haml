@@ -1,6 +1,25 @@
 %header{ :'parallax-background' => 'parallax-background', :'parallax-ratio' => '-0.2' }
-	#top.text-center
+	#top.text-center{ :'parallax' => 'parallax', :'parallax-ratio' => '0.1' }
 		.logo
 		%h1.text-center
 			%span Alto
 			Cascabeles
+	.sub.container
+		.car{ :'uib-carousel interval' => '6000', :'no-wrap' => 'false', :'ng-cloak' => 'ng-cloak' }
+			%uib-slide{ :'active' => 'slide.active' }
+				%p.text-center
+					Desde 500mt²
+			%uib-slide
+				%p.text-center
+					Flora y Fauna Nativa
+			%uib-slide
+				%p.text-center
+					Amplia Vista al Mar
+
+		.icon-scroll
+			.mouse.hidden-xs
+				.wheel
+			.arrow
+				%span.a1
+				%span.a2
+				%span.a3

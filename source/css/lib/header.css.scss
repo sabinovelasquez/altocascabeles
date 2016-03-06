@@ -6,6 +6,8 @@ header{
 	min-height: 520px;
 	background: url('../img/head/1.jpg');
 	background-size: cover;
+	overflow:hidden;
+	position: relative;
 	#top{
 		position: absolute;
 		left:50%;
@@ -13,7 +15,7 @@ header{
 		margin-left:-150px;
 		width: 300px;
 		.logo{
-			margin-left: 100px;
+			margin: 0 100px;
 			width: 100px;
 			height: 100px;
 		}
@@ -27,5 +29,20 @@ header{
 			}
 		}
 	}
-	
+
+	.sub{
+		position: absolute;
+		width: 100%;
+		bottom: 20px;
+		p{
+			font-weight: 400;
+			font-size: 1.4em;
+			font-style: italic;
+			color: white;
+			letter-spacing: 2px;
+		}
+	}
+	.carousel-indicators, .carousel-control{
+		display: none;
+	}
 }
