@@ -7,6 +7,7 @@
 //=require vendor/angular/angular-scroll.min
 //=require vendor/angular/angular-touch.min
 
+//=require vendor/ng-map.min
 //=require vendor/ui-bootstrap-tpls-0.14.3.min
 //=require vendor/angulartics
 //=require vendor/angulartics-google-analytics
