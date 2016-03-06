@@ -4,7 +4,9 @@
       %button.navbar-toggle{'ng-click' => 'navbarCollapsed = !navbarCollapsed', :type => 'button'}
         %span.sr-only Toggle navigation
         %i.fa.fa-bars
-      %a.navbar-brand{ :'href' => '#top', :'du-smooth-scroll' => 'du-smooth-scroll', :'duration' => '800', :'du-scrollspy' => 'du-scrollspy'} Alto Cascabeles
+      %a.navbar-brand{ :'href' => '#top', :'du-smooth-scroll' => 'du-smooth-scroll', :'duration' => '800', :'du-scrollspy' => 'du-scrollspy'} 
+        .logo
+        Alto Cascabeles
     .collapse.navbar-collapse{:'uib-collapse' => 'navbarCollapsed'}
       %ul.nav.navbar-nav
         %li{ :'href' => '#features', :'du-smooth-scroll' => 'du-smooth-scroll', :'duration' => '800', :'du-scrollspy' => 'du-scrollspy', :'ng-click' => 'navbarCollapsed=true', :'analytics-on' => 'click', :'analytics-event' => 'go to: #about', :'analytics-category' => 'shortcuts' }
