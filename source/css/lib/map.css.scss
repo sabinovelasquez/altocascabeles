@@ -1,3 +1,19 @@
-ng-map{
-	height:500px;
+@import 'colors';
+@import 'functions';
+
+#map{
+	background: $brown;
+	h2, h4{
+		color: white;
+	}
+	p{
+		color: white;
+		span{
+			font-family: 'Julius Sans One', sans-serif;
+		}
+	}
+	ng-map{
+		height:500px;
+	}
 }
+	

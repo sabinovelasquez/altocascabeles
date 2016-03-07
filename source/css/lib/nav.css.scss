@@ -5,7 +5,7 @@
 nav.navbar-default{
 	font-family: 'Julius Sans One', sans-serif;
 	background-color: $brown;
-	border-color: darken($brown, 10);
+	border-color: $l-grey;
 	color: white;
 	.navbar-brand{
 		font-family: 'Julius Sans One', sans-serif;

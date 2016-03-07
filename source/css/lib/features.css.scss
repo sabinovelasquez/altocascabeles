@@ -1,0 +1,63 @@
+@import 'functions';
+@import 'colors';
+
+#features{
+	.info{
+		.img-circ{
+			overflow: hidden;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			-webkit-transform: translate3d(0px, 0px, 0px);
+			-moz-transform: translate3d(0px, 0px, 0px);
+			-ms-transform: translate3d(0px, 0px, 0px);
+			-o-transform: translate3d(0px, 0px, 0px);
+			transform: translate3d(0px, 0px, 0px);
+			border: 2px solid $brown;
+			background-size:contain;
+			img{
+				@include transition(all .4s ease);
+				opacity:.8;
+				min-width: 100%;
+				-webkit-filter: grayscale(.6);
+				-moz-filter: grayscale(.6);
+				-o-filter: grayscale(.6);
+				-ms-filter: grayscale(.6);
+			}
+			&:hover{
+				img{
+					opacity:1;
+					-webkit-filter: grayscale(0);
+					-moz-filter: grayscale(0);
+					-o-filter: grayscale(0);
+					-ms-filter: grayscale(0);
+				}
+			}
+		}
+	}
+	h3{
+		font-size: 1.2em;
+		&::before{
+			content:'';
+			margin-top: 10px;
+			margin-left: -15px;
+			position: absolute;
+			width: 10px;
+			height: 1px;
+			background: $brown;
+		}
+		&::after{
+			content:'';
+			margin-top: 10px;
+			margin-right: 5px;
+			position: absolute;
+			width: 10px;
+			height: 1px;
+			background: $brown;
+		}
+	}
+	p{
+		padding: 10px 0;
+		border-bottom: 1px dotted $brown;
+	}
+}
