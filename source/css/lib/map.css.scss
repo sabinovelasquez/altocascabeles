@@ -3,6 +3,8 @@
 
 #map{
 	background: $brown;
+	float: left;
+	width: 100%;
 	h2, h4{
 		color: white;
 	}
@@ -10,6 +12,13 @@
 		color: white;
 		span{
 			font-family: 'Julius Sans One', sans-serif;
+		}
+	}
+	.map-container{
+		width: 100%;
+		float: left;
+		.map{
+			padding: 0;
 		}
 	}
 	ng-map{
