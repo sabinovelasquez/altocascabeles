@@ -1,0 +1,14 @@
+@import 'functions';
+@import 'colors';
+
+#contact{
+	input, textarea, .input-group-addon{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+	#submit{
+		background-color: $brown;
+		border: none;
+	}
+}

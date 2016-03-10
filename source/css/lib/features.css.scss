@@ -58,6 +58,10 @@
 	}
 	p{
 		padding: 10px 0;
+    min-height: 125px;
 		border-bottom: 1px dotted $brown;
+    @media ( min-width: 1280px ) {
+			min-height: 102px;
+		}
 	}
 }

@@ -4,7 +4,7 @@
 @import 'header';
 @import 'features';
 @import 'map';
-
+@import 'contact';
 
 body{
 	font-family: 'Crimson Text', serif;
@@ -14,8 +14,16 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'Julius Sans One', sans-serif;
 }
 section{
+  width:100%;
+  float: left;
 	padding: 80px 0;
 	h2{
 		margin:30px 0;
 	}
+}
+footer{
+  width: 100%;
+  padding: 20px 0 0;
+  float: left;
+  border-top: 1px dotted $brown;
 }
