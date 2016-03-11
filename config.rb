@@ -26,8 +26,9 @@ case ENV['TARGET'].to_s.downcase
     activate :deploy do |deploy|
       deploy.method = :rsync
       deploy.build_before = true
-      deploy.host = '45.55.240.255'
-      deploy.path = '/var/www/sabino.cl/public_html/clients/altocascabel/'
+      deploy.host = '104.236.203.185'
+      deploy.user = 'prod'
+      deploy.path = '/home/prod/webapps/altocascabeles/www/'
     end
   else
     activate :deploy do |deploy|

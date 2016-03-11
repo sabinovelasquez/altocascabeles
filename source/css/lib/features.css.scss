@@ -13,16 +13,13 @@
 			-ms-transform: translate3d(0px, 0px, 0px);
 			-o-transform: translate3d(0px, 0px, 0px);
 			transform: translate3d(0px, 0px, 0px);
-			border: 2px solid $brown;
+			// border: 4px solid white;
 			background-size:contain;
 			img{
 				@include transition(all .4s ease);
-				opacity:.92;
+				// opacity:.92;
 				min-width: 100%;
-				-webkit-filter: grayscale(.6);
-				-moz-filter: grayscale(.6);
-				-o-filter: grayscale(.6);
-				-ms-filter: grayscale(.6);
+        border: 2px solid white;
 			}
 			&:hover{
 				img{
