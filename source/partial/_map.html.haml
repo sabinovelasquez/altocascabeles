@@ -1,4 +1,6 @@
-%section#map
+%section#map{ :'ng-controller' => 'mapCtrl' }
+	%script#modalTemplate{ :'type' => 'text/ng-template' }
+		= partial 'modal/modal'
 	%h2.text-center
 		Ubicación
 	.container
@@ -14,6 +16,9 @@
 					%span
 						509
 					Parcelas
+				%p.text-center
+					%a.btn.btn-default{ :'type' => 'button', :'ng-click' => 'open()' }
+						Ver lotes
 	.map-container
 		.col-sm-7.map
 			#streetview
