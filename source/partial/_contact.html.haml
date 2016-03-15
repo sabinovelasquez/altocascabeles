@@ -27,11 +27,11 @@
 								
 						.form-group
 							%label Email
-							%input.form-control{:'ng-model' => 'InputEmail', :'placeholder' => 'Ingrese su Email', :'required' => 'required', :'type' => 'email' }
+							%input.form-control{:'ng-model' => 'email', :'placeholder' => 'Ingrese su Email', :'required' => 'required', :'type' => 'email' }
 								
 						.form-group
 							%label Mensaje
-							%textarea.form-control{:'ng-model' => 'InputMessage', :'required' => 'required', :rows => '5' }
+							%textarea.form-control{:'ng-model' => 'message', :'required' => 'required', :'ng-model' => 'name', :rows => '5' }
 								
 						-# .form-group
 						-# 	%label{:for => "InputReal"} What is 4+3? (Simple Spam Checker)

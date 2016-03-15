@@ -12,7 +12,7 @@ var app = angular
 					controller: 'ModalInstanceCtrl',
 					size: 'lg'
 				});
-				
+
 			}
 		}
 	])
@@ -35,25 +35,26 @@ var app = angular
 
 				var apiURL = "https://mandrillapp.com/api/1.0/messages/send.json";
 				var emailBody = "From: sabrillapp<br><br>Subject: asuton<br><br>Mensaje";
+				var name = $scope.name;
+				console.log(name);
+				// var params = {
+				// 	"message": {
+				// 		"from_email":'test@test.com',
+				// 		"to":[{"email":"myemail@hotmail.com"}],
+				// 		"subject": "New email from website",
+				// 		"html": emailBody
+				// 	}
+				// };
 
-				var params = {
-					"message": {
-						"from_email":'test@test.com',
-						"to":[{"email":"myemail@hotmail.com"}],
-						"subject": "New email from website",
-						"html": emailBody
-					}
-				};
+				// $http.post(apiURL, params).
 
-				$http.post(apiURL, params).
+				// success(function (data, status, headers, config) {
+				// 	console.log(status);
+				// }).
 
-				success(function (data, status, headers, config) {
-					console.log(status);
-				}).
-
-				error( function (data, status, headers, config) {
-					console.log(status);
-				});
+				// error( function (data, status, headers, config) {
+				// 	console.log(status);
+				// });
 
 			};
 		}
