@@ -31,7 +31,7 @@
 								
 						.form-group
 							%label Mensaje
-							%textarea.form-control{:'ng-model' => 'message', :'required' => 'required', :'ng-model' => 'name', :rows => '5' }
+							%textarea.form-control{:'ng-model' => 'message', :'required' => 'required', :rows => '5' }
 								
 						-# .form-group
 						-# 	%label{:for => "InputReal"} What is 4+3? (Simple Spam Checker)
@@ -39,9 +39,9 @@
 						-# 		%input#InputReal.form-control{:'ng-model' => "InputReal", :'required' => 'required', :'type' => 'text'}
 						-# 		%span.input-group-addon
 						-# 			%i.glyphicon.glyphicon-ok.form-control-feedback
-						%input#submit.btn.btn-info.pull-right{:'ng-model' => 'submit', :'type' => 'submit', :value => 'Enviar' }
-
-				%hr.featurette-divider.hidden-lg/
+						%input#submit.btn.btn-info.pull-right{:'ng-model' => 'submit', :'type' => 'submit', :value => 'Enviar', :'ng-class' => '{disabled:sending}' }
+						%i.fa.fa-spinner.fa-pulse.sending{ :'ng-show' => 'sending' }
+				%hr.featurette-divider.hidden-lg
 				.col-lg-5.col-md-push-1
 					%address
 						%h3 Alto Cascabeles

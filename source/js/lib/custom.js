@@ -28,33 +28,41 @@ var app = angular
 
 	])
 
-	.controller('ContactCtrl', ['$scope',
-		function ($scope) {
+	.controller('ContactCtrl', ['$scope', '$http',
+		function ($scope, $http) {
+			
+			$scope.sending = false;
 
 			$scope.sendTheMail = function() {
-
-				var apiURL = "https://mandrillapp.com/api/1.0/messages/send.json";
-				var emailBody = "From: sabrillapp<br><br>Subject: asuton<br><br>Mensaje";
+				$scope.sending = true;
 				var name = $scope.name;
-				console.log(name);
-				// var params = {
-				// 	"message": {
-				// 		"from_email":'test@test.com',
-				// 		"to":[{"email":"myemail@hotmail.com"}],
-				// 		"subject": "New email from website",
-				// 		"html": emailBody
-				// 	}
-				// };
+				var email = $scope.email;
+				var message = $scope.message;
 
-				// $http.post(apiURL, params).
+				var apiURL = 'https://mandrillapp.com/api/1.0/messages/send.json';
+				var emailBody = 'De: '+name+'<br>'+email+'<br>Mensaje:<br><br>'+message;
 
-				// success(function (data, status, headers, config) {
-				// 	console.log(status);
-				// }).
+				var params = {
+					'key': 'Q5PXL8wr5JBpdCVywURUlg',
+					'message': {
+						'from_email':email,
+						'to':[{'email':'sabinovelasquez@gmail.com'}],
+						'subject': 'Formulario Alto Cascabeles',
+						'html': emailBody
+					}
+				};
 
-				// error( function (data, status, headers, config) {
-				// 	console.log(status);
-				// });
+				$http.post(apiURL, params).
+
+				success(function (data, status, headers, config) {
+					console.log(status);
+					$scope.sending = false;
+				}).
+
+				error( function (data, status, headers, config) {
+					console.log(status);
+					$scope.sending = false;
+				});
 
 			};
 		}
