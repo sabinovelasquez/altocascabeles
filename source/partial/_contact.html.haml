@@ -15,31 +15,31 @@
 				-# .alert.alert-danger
 				-# 	%span.glyphicon.glyphicon-alert
 				-# 	%strong Error! Please check the inputs. (If form error!)
-				%form{:action => "", :method => "post", :role => "form"}
+				%form{ :'ng-submit' => 'sendTheMail()', :'ng-controller' => 'ContactCtrl' }
 					.col-lg-6
 						-# .well.well-sm
 						-# 	%strong
 						-# 		%i.glyphicon.glyphicon-ok.form-control-feedback
 						-# 		Required Field
 						.form-group
-							%label{:for => "InputName"} Nombre
-							%input.form-control{:name => "InputName", :placeholder => "Ingrese su Nombre", :required => "", :type => "text"}
+							%label Nombre
+							%input.form-control{:'ng-model' => 'name', :'placeholder' => 'Ingrese su Nombre', :'required' => 'required', :'type' => 'text' }
 								
 						.form-group
-							%label{:for => "InputEmail"} Email
-							%input.form-control{:name => "InputEmail", :placeholder => "Ingrese su Email", :required => "", :type => "email"}
+							%label Email
+							%input.form-control{:'ng-model' => 'InputEmail', :'placeholder' => 'Ingrese su Email', :'required' => 'required', :'type' => 'email' }
 								
 						.form-group
-							%label{:for => "InputMessage"} Mensaje
-							%textarea.form-control{:name => "InputMessage", :required => "", :rows => "5"}
+							%label Mensaje
+							%textarea.form-control{:'ng-model' => 'InputMessage', :'required' => 'required', :rows => '5' }
 								
 						-# .form-group
 						-# 	%label{:for => "InputReal"} What is 4+3? (Simple Spam Checker)
 						-# 	.input-group
-						-# 		%input#InputReal.form-control{:name => "InputReal", :required => "", :type => "text"}
+						-# 		%input#InputReal.form-control{:'ng-model' => "InputReal", :'required' => 'required', :'type' => 'text'}
 						-# 		%span.input-group-addon
 						-# 			%i.glyphicon.glyphicon-ok.form-control-feedback
-						%input#submit.btn.btn-info.pull-right{:name => "submit", :type => "submit", :value => "Enviar"}
+						%input#submit.btn.btn-info.pull-right{:'ng-model' => 'submit', :'type' => 'submit', :value => 'Enviar' }
 
 				%hr.featurette-divider.hidden-lg/
 				.col-lg-5.col-md-push-1
